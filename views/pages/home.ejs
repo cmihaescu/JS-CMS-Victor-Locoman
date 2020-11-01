@@ -26,7 +26,7 @@
         <div class="column-articles">
         <% posts.forEach(post => { %>
             <article>
-                <h2 id=<%= post.id %>><a href="/posts/<%= post.slug %>"> <%= post.title %></a></h2>
+                <h2 id=<%='post-'+ post.id %>><a href="/posts/<%= post.slug %>"> <%= post.title %></a></h2>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= post.content %></p>
             </article>
             <% })
