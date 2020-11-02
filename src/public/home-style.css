@@ -99,6 +99,26 @@ article p {
     word-wrap: break-word;
 }
 
+.article-bottom-padding {
+    height: 5vh;
+}
+
+.go-back-up {
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ddd;
+    padding-top: 2%;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.go-back-up:hover {
+    color: #fff;
+    font-size: 1.03rem;
+    transition: font-size 0.2s, color 0.2s;
+}
+
 .background-image {
     background-image: url(img/background-photo-3.jpg);
     background-size: cover;
@@ -132,6 +152,7 @@ article p {
 
 .table-of-articles a,
 .links-to-other a {
+    cursor: pointer;
     text-decoration: none;
     color: #ddd;
 }
