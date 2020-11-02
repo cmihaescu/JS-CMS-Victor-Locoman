@@ -26,10 +26,14 @@
         <div class="column-articles">
             <div id='post-0' class="article-bottom-padding"></div>
         <% posts.forEach(post => { %>
-            <article>
+            <article id="article-<%= post.id %>">
                 <h2><a href="/posts/<%= post.slug %>"> <%= post.title %></a></h2>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= post.content %></p>
+            <div class="links">                
+                <a href="../admin/api/edit/<%= post.id %>">Edit Post</a>
+                <a id="delete-post-<%= post.id %>" href="../admin/api/delete/<%= post.id %>">Delete Post</a>
                 <a class="go-back-up post-btn-<%= post.id %>"> Go back up</a>
+            </div>
                 <div id=<%='post-'+ (Number(post.id)+1) %> class="article-bottom-padding"></div>
             </article>
             <% })

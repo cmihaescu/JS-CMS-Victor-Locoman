@@ -108,7 +108,6 @@ article p {
     cursor: pointer;
     text-decoration: none;
     color: #ddd;
-    padding-top: 2%;
     width: fit-content;
     margin-left: auto;
 }
@@ -162,4 +161,23 @@ article p {
     color: #fff;
     font-size: 1.1rem;
     transition: font-size 0.5s, color 0.2s;
+}
+
+.links a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #ddd;
+    padding-right: 2%;
+}
+
+.links a:hover {
+    color: #fff;
+    font-size: 1.1rem;
+    transition: font-size 0.5s, color 0.2s;
+}
+
+.links {
+    padding: 3% 3% 0 3%;
+    display: flex;
+    justify-content: flex-end;
 }
