@@ -5,6 +5,7 @@ const numberOfArticles =document.getElementsByTagName("h2").length
 for (let i=0; i<numberOfArticles;i++){
     let scrollToArticleLinkId = "scroll-to-post-"+i;
     let targetId = "post-"+i;
+    console.log("targetId", targetId)
     let goBackButtonClass = "post-btn-"+i;
     let target = document.querySelector(`#${targetId}`)
     let scrollToArticleLink = document.querySelector(`#${scrollToArticleLinkId}`);

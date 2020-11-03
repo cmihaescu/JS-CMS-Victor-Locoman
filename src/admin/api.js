@@ -16,9 +16,13 @@ router.get('/delete/:id', (req, res) => {
 
 // DELETE ALL POSTS
 
-router.get('/deleteAll', (req, res) => {
+router.get('/confirmDeleteAllPage', (req, res) => {
+        res.render('pages/confirmDeleteAllPage', {});
+    });
+
+router.get('/confirmDeleteAllPage/deleteAllPage', (req, res) => {
     const post = db.removeAll('posts');
-        res.render('pages/deleteAllPage', {});
+        res.render('pages/deleteAllpage', {});
     });
 
 // CREATE POST
