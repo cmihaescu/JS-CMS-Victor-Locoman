@@ -19,6 +19,9 @@
     "jquery": "^3.5.1",
     "mongodb": "^3.6.2",
     "mysql": "^2.18.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.4"
   }
 }
