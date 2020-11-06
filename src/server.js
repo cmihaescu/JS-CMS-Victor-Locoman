@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 const admin = require('./admin'); // importăm din /admin/index.js
 const blog = require('./blog'); // importăm din /blog.js
 const populate = require('./populateDb');
