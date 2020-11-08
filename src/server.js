@@ -13,7 +13,6 @@ const port = 3000; // configurăm portul pe care va rula aplicația: localhost:3
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public'))); // aici vom ține fișierele statice pentru blog
-// app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })) 
 
 app.use('/admin', admin); // aici legăm routerul admin de ruta /admin

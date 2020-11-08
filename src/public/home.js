@@ -1,6 +1,5 @@
-// const { connect } = require("mongodb");
-
 const numberOfArticles =document.getElementsByTagName("h2").length
+
 
 for (let i=0; i<numberOfArticles;i++){
     let scrollToArticleLinkId = "scroll-to-post-"+i;

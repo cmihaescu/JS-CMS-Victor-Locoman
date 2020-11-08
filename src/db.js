@@ -7,7 +7,7 @@ const getMongoUri = () => {
   const user = encodeURIComponent(process.env.mongoUser);
   const pass = encodeURIComponent(process.env.mongoPass);
   const url = process.env.mongoUrl;
-  return `mongodb+srv://${user}:${pass}@${url}/`;
+  return `mongodb+srv://${user}:${pass}@${url}`;
 };
 
 // Replace the uri string with your MongoDB deployment's connection string.
@@ -15,12 +15,12 @@ const uri = getMongoUri();
 
 //CONNECT WITH MONGOOSE
 
-mongoose.connect(uri, {useNewUrlParser:true});
-const con = mongoose.connection
+// mongoose.connect(uri, {useNewUrlParser:true});
+// const con = mongoose.connection
 
-con.on('open', ()=>{
-    console.log('Connected to DB with mongoose');
-});
+// con.on('open', ()=>{
+//     console.log('Connected to DB with mongoose');
+// });
 
 
 
