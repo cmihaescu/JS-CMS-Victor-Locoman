@@ -21,6 +21,9 @@
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.13",
     "mysql": "^2.18.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.4"
   }
 }

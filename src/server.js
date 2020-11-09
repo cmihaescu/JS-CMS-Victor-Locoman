@@ -1,10 +1,9 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-require('dotenv').config();
+require('dotenv').config(); // importăm fișierul .env, fiind accesibil prin obiectul global process.env
 const admin = require('./admin'); // importăm din /admin/index.js
 const blog = require('./blog'); // importăm din /blog.js
-const populate = require('./populateDb');
 
 
 
@@ -20,8 +19,7 @@ app.use('/', blog); // blogul va fi disponibil pe root (ex. localhost:3000/)
 
 
 app.listen(port, () => {
-    console.log(`App started`);
-    populate();
+  console.log(`App started`);
 });
 
 module.exports = { app, bodyParser };
