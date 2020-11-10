@@ -14,7 +14,7 @@
             <li class="menu-item"><a href="admin/"> Go to static blog </a></li>
         </ul>
     </div>
-    <div class="h1-div">
+    <div id="h1" class="h1-div">
          <h1> Welcome to my Space blog!</h1>
     </div>
 </header>
@@ -25,9 +25,15 @@
     <div class="main">
         <div class="column-articles">
         <% posts.forEach(post => { %>
-            <article>
-                <h2 id=<%= post.id %>><a href="/posts/<%= post.slug %>"> <%= post.title %></a></h2>
+            <article id="article-<%= post.id %>">
+                <div id=<%='post-'+ (Number(post.id)) %> class="article-bottom-padding"></div>
+                <h2><a href="/posts/<%= post.slug %>"> <%= post.title %></a></h2>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= post.content %></p>
+            <div class="links">                
+                <a href="../admin/api/edit/<%= post.id %>">Edit Post</a>
+                <a id="delete-post-<%= post.id %>" href="../admin/api/delete/<%= post.id %>">Delete Post</a>
+                <a class="go-back-up post-btn-<%= post.id %>"> Go back up</a>
+            </div>
             </article>
             <% })
             %>
@@ -36,20 +42,20 @@
             <ul class="table-of-articles">
             <h3>Links to Articles</h3>
                 <% posts.forEach(post => { %>
-                <li id=<%='scrollTo'+ post.id %>><a href="/posts/<%= post.slug %>"><%= post.title %></a></li>
+                <li><a id="<%= post.id %>" class="scroll-to-post"><%= post.title %></a></li>
                 <% }); 
                  %>
             </ul>
             <ul class="links-to-other">
             <h3 title="These are purely decorative">Links to other Blogs and interesting resources</h3>
-                <li title="This is purely decorative"><a href=""> www.randomlink.com</a></li>
-                <li title="This is purely decorative"><a href="">www.someotherrandomlink.com</a></li>
-                <li title="This is purely decorative"><a href="">www.anotherrandomlink.com</a></li>
-                <li title="This is purely decorative"><a href="">www.linkrandomlink.com</a></li>
-                <li title="This is purely decorative"><a href="">www.randomlink.com</a></li>
-                <li title="This is purely decorative"><a href="">www.someotherrandomlink.com</a></li>
-                <li title="This is purely decorative"><a href="">www.anotherrandomlink.com</a></li>
-                <li title="This is purely decorative"><a href="">www.linkrandomlink.com</a></li>
+                <li title="This is purely decorative"><a> www.randomlink.com</a></li>
+                <li title="This is purely decorative"><a>www.someotherrandomlink.com</a></li>
+                <li title="This is purely decorative"><a>www.anotherrandomlink.com</a></li>
+                <li title="This is purely decorative"><a>www.linkrandomlink.com</a></li>
+                <li title="This is purely decorative"><a>www.randomlink.com</a></li>
+                <li title="This is purely decorative"><a>www.someotherrandomlink.com</a></li>
+                <li title="This is purely decorative"><a>www.anotherrandomlink.com</a></li>
+                <li title="This is purely decorative"><a>www.linkrandomlink.com</a></li>
             </ul>
         </div>
     </div>

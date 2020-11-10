@@ -99,6 +99,25 @@ article p {
     word-wrap: break-word;
 }
 
+.article-bottom-padding {
+    height: 5vh;
+}
+
+.go-back-up {
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ddd;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.go-back-up:hover {
+    color: #fff;
+    font-size: 1.03rem;
+    transition: font-size 0.2s, color 0.2s;
+}
+
 .background-image {
     background-image: url(img/background-photo-3.jpg);
     background-size: cover;
@@ -113,19 +132,16 @@ article p {
 }
 
 .column-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
-
-    /* display: flex;
-    flex-flow: column wrap; 
-    DE CE CAND IL BAGA IN URMATORUL RAND MI-L DA FOARTE JOS
-    */
+    
+    display: flex;
+    flex-flow: row wrap; 
+    align-content: flex-start;
 }
 
 .table-of-articles,
 .links-to-other {
     padding: 30% 2% 0 3%;
+    max-width: 250px;
 }
 
 .table-of-articles li,
@@ -135,6 +151,7 @@ article p {
 
 .table-of-articles a,
 .links-to-other a {
+    cursor: pointer;
     text-decoration: none;
     color: #ddd;
 }
@@ -144,4 +161,23 @@ article p {
     color: #fff;
     font-size: 1.1rem;
     transition: font-size 0.5s, color 0.2s;
+}
+
+.links a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #ddd;
+    padding-right: 2%;
+}
+
+.links a:hover {
+    color: #fff;
+    font-size: 1.1rem;
+    transition: font-size 0.5s, color 0.2s;
+}
+
+.links {
+    padding: 3% 3% 0 3%;
+    display: flex;
+    justify-content: flex-end;
 }

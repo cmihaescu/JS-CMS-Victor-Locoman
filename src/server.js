@@ -20,7 +20,7 @@ app.use('/', blog); // blogul va fi disponibil pe root (ex. localhost:3000/)
 
 
 app.listen(port, () => {
-    console.log(`App started`);
+    console.log(`App started and running on port ${port}`);
     populate();
 });
 

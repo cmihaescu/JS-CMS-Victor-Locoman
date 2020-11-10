@@ -40,8 +40,8 @@ const set = (table, updatedItem) => { // update
 };
 const remove = (table, id) => { // delete
     // @todo: scrie funcționalitatea
-    const itemIndex =  data[table].findIndex(dataItem => dataItem.slug===id);
-    data[table].splice(itemIndex,1,'empty');
+    const itemIndex =  data[table].findIndex(dataItem => dataItem.id===id);
+    data[table].splice(itemIndex,1);
     // delete data[table][itemIndex];
     return itemIndex === -1 ? false : true;
 };

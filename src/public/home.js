@@ -1,11 +1,23 @@
-import {data} from '../db'
+const numberOfArticles =document.getElementsByTagName("h2").length
+const goBackButton= document.querySelectorAll(".go-back-up");
+const goBackTarget = document.querySelector("#h1");
+const articleLinkBtn = document.querySelectorAll(".scroll-to-post")
 
-let test = document.getElementById('test');
-test.innerHTML = 'test';
-let $ =document.querySelectorAll;
+function smoothScrolltoTop(){
+    goBackTarget.scrollIntoView({behavior: "smooth", block: "start"});
+    }
 
-$( `#scrollTo${post.id}` ).click(function() {
-    $( `#${post.id}` ).scroll();
-  });
+for (let article of articleLinkBtn) {
+    article.addEventListener('click', function smoothScrolltoArticle(){
+        let targetArticle = document.querySelector(`#article-${article.id}`)
+        targetArticle.scrollIntoView({behavior: "smooth", block: "start"});
+        })
+    }
 
-//   <a href="/posts/<%= post.slug %>">
+function addEventListenerList(list, event, fn) {
+    for (var i = 0, len = list.length; i < len; i++) {
+        list[i].addEventListener(event, fn, false);
+    }
+}
+
+addEventListenerList(goBackButton, "click", smoothScrolltoTop);
