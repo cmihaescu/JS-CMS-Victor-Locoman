@@ -24,9 +24,9 @@
     <div class="background-image">
     <div class="main">
         <div class="column-articles">
-            <div id='post-0' class="article-bottom-padding"></div>
         <% posts.forEach(post => { %>
             <article id="article-<%= post.id %>">
+                <div id=<%='post-'+ (Number(post.id)) %> class="article-bottom-padding"></div>
                 <h2><a href="/posts/<%= post.slug %>"> <%= post.title %></a></h2>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= post.content %></p>
             <div class="links">                
@@ -34,7 +34,6 @@
                 <a id="delete-post-<%= post.id %>" href="../admin/api/delete/<%= post.id %>">Delete Post</a>
                 <a class="go-back-up post-btn-<%= post.id %>"> Go back up</a>
             </div>
-                <div id=<%='post-'+ (Number(post.id)+1) %> class="article-bottom-padding"></div>
             </article>
             <% })
             %>
@@ -43,7 +42,7 @@
             <ul class="table-of-articles">
             <h3>Links to Articles</h3>
                 <% posts.forEach(post => { %>
-                <li><a id="<%= "scroll-to-post-"+ post.id %>"><%= post.title %></a></li>
+                <li><a id="<%= post.id %>" class="scroll-to-post"><%= post.title %></a></li>
                 <% }); 
                  %>
             </ul>
